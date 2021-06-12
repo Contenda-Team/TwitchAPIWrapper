@@ -2,8 +2,8 @@
 
 function getAuth(client_id, redirect_uri, scope_entities){
     
-    const scope = ""
-    scope_entities.array.forEach(element => {
+    var scope = ""
+    scope_entities.forEach(element => {
         scope += element
     });
     encodeURIComponent(scope)
