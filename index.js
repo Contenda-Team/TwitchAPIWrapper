@@ -6,8 +6,8 @@ function getAuth(client_id, redirect_uri, scope_entities){
     scope_entities.forEach(element => {
         scope += element
     });
-    encodeURIComponent(scope)
-    return `https://id.twitch.tv/oauth2/authorize?client_id=${client_id}&redirect_uri=${redirect_uri}&response_type=code&scope=${scope}`;
+    
+    return `https://id.twitch.tv/oauth2/authorize?client_id=${client_id}&redirect_uri=${redirect_uri}&response_type=code&scope=${encodeURIComponent(scope)}`;
 }
 
 async function get_tokens(twitch_client, twitch_secret, code){
