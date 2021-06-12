@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/Contenda-Team/TwitchAPIWrapper#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "mocha": "^9.0.0"
   }
-  
 }
