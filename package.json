@@ -1,0 +1,22 @@
+{
+  "name": "twitchapiwrapper",
+  "version": "1.0.0",
+  "description": "Wrapper for Twitch API calls",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Contenda-Team/TwitchAPIWrapper.git"
+  },
+  "keywords": [
+    "Twitch"
+  ],
+  "author": "Kyle Zhang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Contenda-Team/TwitchAPIWrapper/issues"
+  },
+  "homepage": "https://github.com/Contenda-Team/TwitchAPIWrapper#readme"
+}
