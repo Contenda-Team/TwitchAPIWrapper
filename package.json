@@ -4,7 +4,7 @@
   "description": "Wrapper for Twitch API calls",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --timeout 10000"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/Contenda-Team/TwitchAPIWrapper/issues"
   },
-  "homepage": "https://github.com/Contenda-Team/TwitchAPIWrapper#readme"
+  "homepage": "https://github.com/Contenda-Team/TwitchAPIWrapper#readme",
+  "dependencies": {
+    "mocha": "^9.0.0"
+  }
+  
 }
