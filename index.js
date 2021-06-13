@@ -4,9 +4,8 @@ function getAuth(client_id, redirect_uri, scope_entities){
     
     var scope = ""
     scope_entities.forEach(element => {
-        scope.concat(" " + element)
+        scope.concat(encodeURIComponent(" ") + element)
     });
-    console.log(encodeURIComponent(scope));
     return `https://id.twitch.tv/oauth2/authorize?client_id=${client_id}&redirect_uri=${redirect_uri}&response_type=code&scope=${encodeURIComponent(scope)}`;
 }
 
