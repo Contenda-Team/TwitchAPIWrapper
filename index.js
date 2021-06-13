@@ -3,7 +3,7 @@ const axios = require('axios')
 function getAuth(client_id, redirect_uri, scope_entities){
     var scope = scope_entities[0];
     for(var i = 1; i < scope_entities.length; i++){
-        str = str.concat(encodeURIComponent(" ") + scope_entities[i]);
+        scope = scope.concat(encodeURIComponent(" ") + scope_entities[i]);
     }
     console.log("scope: " + scope);
     
