@@ -1,12 +1,13 @@
 const axios = require('axios')
 
 function getAuth(client_id, redirect_uri, scope_entities){
+    var scope = scope_entities[0];
+    for(var i = 1; i < scope_entities.length; i++){
+        str = str.concat(encodeURIComponent(" ") + scope_entities[i]);
+    }
+    console.log("scope: " + scope);
     
-    var scope = ""
-    scope_entities.forEach(element => {
-        scope.concat(encodeURIComponent(" ") + element)
-    });
-    return `https://id.twitch.tv/oauth2/authorize?client_id=${client_id}&redirect_uri=${redirect_uri}&response_type=code&scope=${encodeURIComponent(scope)}`;
+    return `https://id.twitch.tv/oauth2/authorize?client_id=${client_id}&redirect_uri=${redirect_uri}&response_type=code&scope=${scope}`;
 }
 
 async function get_tokens(twitch_client, twitch_secret, code, redirect, body){
