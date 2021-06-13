@@ -17,7 +17,7 @@ async function get_tokens(twitch_client, twitch_secret, code, redirect, body){
 
 async function get_user_id(token, client_id){
     const raw_user_id = await axios({
-        url: 'https://api.twitch.tv/cors-proxy/helix/users?', 
+        url: 'https://api.twitch.tv/helix/users?', 
         method: "GET",
         headers: {
             'Authorization': `Bearer ${token}`,
@@ -29,7 +29,7 @@ async function get_user_id(token, client_id){
 
 async function get_user_subscription(channel_id, user_id, token, client_id){
     const raw_response = await axios({
-        url: `https://api.twitch.tv/cors-proxy/helix/subscriptions/user?broadcaster_id=${channel_id}&user_id=${user_id}`,
+        url: `https://api.twitch.tv/helix/subscriptions/user?broadcaster_id=${channel_id}&user_id=${user_id}`,
         method: "GET",
         headers: {
           'Authorization': `Bearer ${token}`,
