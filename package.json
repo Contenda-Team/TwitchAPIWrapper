@@ -4,7 +4,7 @@
   "description": "Wrapper for Twitch API calls",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --timeout 10000"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",

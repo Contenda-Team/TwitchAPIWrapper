@@ -12,7 +12,7 @@ function getAuth(client_id, redirect_uri, scope_entities){
 
 async function get_tokens(twitch_client, twitch_secret, code, redirect, body){
     const raw = await axios.post(`https://id.twitch.tv/oauth2/token?client_id=${twitch_client}&client_secret=${twitch_secret}&code=${code}&grant_type=authorization_code&redirect_uri=${redirect}`, body);
-		//console.log('twitch token resp: ', raw.data);
+		console.log('twitch token resp: ', raw.data);
     return raw;
 }
 
